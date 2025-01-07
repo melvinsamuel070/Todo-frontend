@@ -24,7 +24,7 @@ jobs:
       - name: Build the Docker Image
         env:
           image_name: test-image
-          username: dapper01
+          username: melvinsamuel070
           APP_VERSION: ${{ steps.version.outputs.app_version }}  
         run: |
           docker build -t $username/$image_name:${{ env.APP_VERSION }} .
@@ -44,7 +44,7 @@ jobs:
     runs-on: self-hosted
     needs: Build
     env:
-      username: dapper01
+      username: melvinsamuel070
       image_name: test-image
     steps:
       - name: Download Docker Image Artifact
@@ -101,7 +101,7 @@ jobs:
           username: oladapper@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Docker Image Deployed from Artifact"
-          to: "oladapolawal12@yahoo.com"
+          to: "melvinsamuel070@gmail.com"
           from: "Mr David Agba DevOps"
           body: |
             Hello,
