@@ -98,7 +98,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           secure: true
-          username: oladapper@gmail.com
+          username: melvinsamuel070@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Docker Image Deployed from Artifact"
           to: "melvinsamuel070@gmail.com"
