@@ -91,7 +91,8 @@ jobs:
         run: |
           echo "Running container with image: $username/$image_name:${{ needs.Build.outputs.app_version }}"
           docker run -d -p 8082:3000 $username/$image_name:${{ needs.Build.outputs.app_version }}
-
+          docker stop $(docker ps -a -q)
+          docker rm $(docker ps -a -q)
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
         with:
